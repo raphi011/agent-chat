@@ -1,0 +1,24 @@
+{
+  "name": "agent-chat-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Agent Chat - Mobile app and n8n integration monorepo",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "build:n8n": "npm run build --workspace=packages/n8n-agent-chat",
+    "dev:n8n": "npm run dev --workspace=packages/n8n-agent-chat",
+    "lint": "npm run lint --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
